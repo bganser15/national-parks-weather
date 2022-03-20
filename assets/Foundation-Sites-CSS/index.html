@@ -1,0 +1,423 @@
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation CSS</title>
+    <link rel="stylesheet" href="css/icons/foundation-icons.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  </head>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <body>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Site Title</li>
+        <li>
+          <a href="#">One</a>
+          <ul class="menu vertical">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="row">
+
+    <!-- HEADING -->
+    <h1>Heading <small>Secondary Text</small></h1>
+    <h2 class="subheader">Heading <small>Secondary Text</small></h2>
+    <!-- PARAGRAPHS -->
+    <p class="lead"><strong>Lorem ipsum dolor</strong> sit amet, consectetur adi
+      Lorem ipsum dolor<em> tempor incididunt</em> sit amet consectetur adi Lorem ipsum dolor,
+      enim <a href="#"> ad minim veniam</a> adi Lorem ipsum dolor, sit amet consectetur adi</p>
+     
+    <p><strong> Lorem ipsum dolor</strong> sit amet assumenda eius quaerat non quia
+      consectetur <em> tempor incididunt</em> elit. Quasi, officia explicabo. Temporibus quam doloribus incidunt, 
+      amet <a href="#">ad minim veniam</a>, itaque eius quia! , voluptatem quidem eos dolorum!</strong></p>  
+  
+    <p>Server Up-Time</p>
+    <div class="stat">230</div>
+  
+      <hr>
+
+      <!-- ALIGNMENT CLASSES -->
+      <p class="text-left">Left aligned text.</p>
+      <p class="text-center">Center aligned text.</p>
+      <p class="text-right">Right aligned text.</p>
+      <p class="text-justify">Justified text.</p>
+    
+      <!-- FLOATS -->
+      <div class="callout clearfix">
+        <a class="button float-left">Left</a>
+        <a class="button float-right">Right</a>
+      </div>
+
+      <hr>
+
+     <!-- CODE -->    
+      <code>&lt;div class="myClass"&gt, Hello World&lt;/div;/div&gt;</code>
+      <p>Press <kbd>Cmd+r</kbd> (or <kbd>Ctrl+r</kbd> on Windows)</p>
+
+      <hr>
+
+    <!-- BLOCKQUOTE -->  
+      <blockquote>
+        This is a blockquote from foundation
+        <cite>Jane Doe</cite>
+      </blockquote>
+
+    <!-- LIST -->
+      <ul class="no-bullet">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+          <ul class="no-bullet">
+         <li>Nested Item</li> 
+         <li>Nested Item</li> 
+         <li>Nested Item</li> 
+       </ul> 
+      </li>
+      <li>Item Four</li>
+    </ul>
+
+    <ol>
+      <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+          <ul>
+         <li>Nested Item</li> 
+         <li>Nested Item</li> 
+         <li>Nested Item</li> 
+       </ul> 
+      </li>
+      <li>Item Four</li>
+    </ol>
+
+    <!-- VISIBILITY -->
+    <p class="hide">Hidden</p>  
+    <p class="invisible">Imvisible</p>
+    <p>You are on a small screen or larger.</p>
+    <p class="show-for-medium">You are on a medium screen or larger</p>
+    <p class="show-for-large">You are on a large screen or larger</p> 
+    <p class="hide-for-small-only">You are not on a small screen</p>
+    <p class="hide-for-medium-only">You are not on a medium screen</p>
+    <p class="hide-for-large-only">You are not on a large screen</p>
+    <p class="show-for-landscape">You are in landscape</p>
+    <p class="show-for-portrait">You are in portrait</p>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <!-- BUTTONS -->
+    <button class="button">Button</button>
+    <a href="#" class="button">Link</a>
+    <input type="button" value="Input" class="button">
+    
+    <!-- COLORED BUTTONS -->
+    <button class="success button">Button</button>
+    <button class="alert button">Button</button>
+    <button class="warning button">Button</button>
+    <button class="secondary button">Button</button>
+    <button class="button disabled">Button</button>
+  </div>
+  
+  <br>
+  <!-- HOLLOW -->
+  <button class="success button hollow">Button</button>
+  <button class="alert button hollow">Button</button>
+  <button class="warning button hollow">Button</button>
+  <button class="secondary button hollow">Button</button>
+  <button class="button disabled hollow">Button</button>
+</div>
+
+<div class="row">
+  <!-- FORMS -->
+  <form>
+    <div>
+      <label>Name</label>
+      <input type="text" placeholder="Name">
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div>
+      <label>Number</label>
+      <input type="number">
+    </div>
+
+    <div>
+      <label>Message</label>
+      <textarea placeholder="Message"></textarea>
+    </div>
+
+    <div>
+      <label>Gender</label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option> 
+      </select>
+    </div>
+
+    <fieldset class="fieldset">
+      <legend> A Fleldset</legend>
+      <input type="checkbox"><label>Checkbox</label>
+      <input type="checkbox"><label>Checkbox</label>
+      <input type="checkbox"><label>Checkbox</label>
+    </fieldset>
+    <label for="fileUpload" class="button">Upload File</label>
+    <input type="file" id="fileUpload" class="show-for-sr">
+
+    <label>Password</label>
+    <input type="password">
+    <p class="help-text">Your password must be 8 characters or more</p>
+
+    <div class="input-group">
+      <span class="input-group-label">@</span>
+      <input class="input-group-field" type="email">
+      <div class="input-group-button">
+        <input type="subnit" class="button" value="Submit">
+      </div>
+    </div> 
+
+    <div class="switch">
+      <input class="switch-input" id="mySwitch" type="checkbox" name="exampleSwitch">
+      <label class="switch-paddle" for="mySwitch">
+        <span class="show-for-sr">Enabled</span>
+      </label>
+    </div>
+
+    <div class="slider" data-slider data-initial-start='0' data-end='20'>
+      <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+      <span class="slider-fill" data-slider-fill></span>
+      <input type="hidden">
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <!-- TABLES -->
+  <table class="striped hover stack table-scroll">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>Stephanie</td>
+      <td>Landon</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>Johnson</td>
+      <td>19</td>
+    </tr>
+  </table>
+</div>
+
+</div class="row"> 
+   <!-- MENU -->
+   <ul class="menu">
+     <li class="menu-text">Site Title</li>
+     <li><a href="#">Link 1</a></li>
+     <li class="active"><a href="#">Link 2</a></li>
+     <li class="active"><a href="#">Link 3</a></li>
+     <li><a href="#">Link 4</a></li>
+   </ul>
+    
+   <ul class="menu vertical">
+      <li class="menu-text">Site Title</li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li class="active"><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+   </ul>
+
+     <ul class="menu simple">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li class="active"><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+   </ul>
+  </div>
+
+  <ul class="menu">
+     <li><a href="#"><i class="fi-heart"></i> <span>One</span></a></li>
+     <li><a href="#"><i class="fi-list"></i> <span>Two</span></a></li>
+     <li><a href="#"><i class="fi-male-female"></i> <span>Three</span></a></li>
+     <li><a href="#"><i class="fi-list"></i> <span>Four</span></a></li>
+ </ul>
+</div>
+
+<div class="row">
+  <!-- CALLOUTS -->
+  <div class="callout">
+    <p>This is an example of a callout.</p>
+  </div>
+  <div class="callout secondary">
+    <p>This is an example of a callout.</p>
+  </div>
+  <div class="callout success">
+    <p>This is an example of a callout.</p>
+  </div>
+  <div class="callout warning">
+    <p>This is an example of a callout.</p>
+  </div>
+  <div class="callout alert">
+    <p>This is an example of a callout.</p>
+  </div>
+</div>
+
+<hr>
+<!-- PROGRESS BARS -->
+  <div class="success progress" role="progressbar">
+    <div class="progress-meter" style="width: 25%">
+      <p class="progress-meter-text">25%</p> 
+  </div>
+</div>
+  <div class="alert progress" role="progressbar">
+    <div class="progress-meter" style="width: 98%">
+      <p class="progress-meter-text">98%</p> 
+  </div>
+</div>
+   <div class="warning progress" role="progressbar">
+    <div class="progress-meter" style="width: 75%">
+      <p class="progress-meter-text">75%</p> 
+  </div>
+</div>
+
+<hr>
+
+<!-- LABELS -->
+<span class="secondary label">Secondary Label</span>
+<span class="success label">Success Label</span>
+<span class="alert label">Alert Label</span>
+ <span class="warning label">Warning Label</span>
+
+</div>
+
+<hr>
+
+<!-- BADGES -->
+<span class="secondary badge">2</span>
+<span class="success badge">3</span>
+<span class="alert badge">A</span>
+<span class="warning badge">B</span>
+
+<hr>
+
+<!-- BREADCRUMBS -->
+<nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="#0">Home</a></li>
+    <li><a href="#0">Features</a></li>
+    <li class="disabled">DISABLED</li>
+    <li>
+      <span class="show-for-sr">Current: </span> Today's Info
+    </li>
+  </ul>
+</nav>
+
+<!-- PAGINATION -->
+ <ul class="pagination" role="navigation"> 
+   <li class="disabled">Previous</li>
+   <li class="current">1</li>
+   <li><a href="#">2</a></li>
+   <li><a href="#">3</a></li>
+   <li><a href="#">4</a></li>
+   <li class="ellipsis"></li>
+   <li><a href="#">13</a></li>
+   <li><a href="#">14</a></li>
+   <li><a href="#">Next</a></li>
+ </ul>
+</div>
+
+<!-- GRID -->
+<div class="row">
+      <div class="small-3 columns">
+        <div class="example-content"></div>
+        <h3>Main Content</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero doloribus debitis placeat!</p>
+      </div>
+  
+  <div class="small-6 columns">
+    <div class="example-content"></div>
+    <h3>Sidebar</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero doloribus debitis placeat!</p>
+  </div>
+</div>
+<!-- </div> -->
+
+<div class="row">
+  <div class="small-2 medium-3 large-4 columns">2/3/4 columns</div>
+  <div class="small-4 medium-3 large-4 columns">4/3/4 columns</div>
+  <div class="small-6 large-4 columns">6/6/4 columns</div>
+</div>
+<div class="row">
+  <div class="large-3 columns">12/12/3 columns</div>
+  <div class="large-6 columns">12/12/6 columns</div>
+  <div class="large-3 columns">12/12/3 columns</div>
+</div>
+<div class="row">
+  <div class="small-6 large-2 columns">6/6/2 columns</div>
+  <div class="small-6 large-8 columns">6/6/8 columns</div>
+  <div class="small-12 large-2 columns">12/12/2 columns</div>
+</div>
+<div class="row">
+  <div class="small-3 columns">3 columns</div>
+  <div class="small-9 columns">9 columns</div>
+</div>
+<div class="row">
+  <div class="medium-8 large-4 columns">12/8/4 columns</div>
+  <div class="medium-4 large-8 columns">12/4/8 columns</div>
+</div>
+  
+<div class="spacer"></div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
