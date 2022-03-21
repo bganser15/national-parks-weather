@@ -1,7 +1,7 @@
 //nps api key P7v76VxhVDmo5rOLwAyEnDqiIYeclDPZgcT0CdBK
 var searchState;
 
-var getPark = function (searchTerm) {
+var getPark = function () {
   var nationalParksUrl =
     "https://developer.nps.gov/api/v1/parks?stateCode=" +
     searchState +
