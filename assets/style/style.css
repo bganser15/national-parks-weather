@@ -60,17 +60,17 @@ header nav ul li a {
 
 /* Footer Styles Begin */
 footer {
-  background: #fce138;
+  background: none;
   width: 100%;
-  padding: 20px 25px;
-  display: flex;
+  padding: 10px 15px;
+  display: block;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 footer h2 {
   display: inline;
-  color: #024e76;
+  color: #ced8dd;
   font-size: 20px;
   margin: 0;
 }
@@ -82,7 +82,7 @@ footer div {
 }
 
 footer a {
-  color: #024e76;
+  color: #d5d9db;
 }
 
 section {
@@ -160,7 +160,7 @@ section {
 /* REACH OUT STYLES START */
 .contact {
   text-align: center;
-  background: #024e76;
+  background: #0c3066;
 }
 
 .contact h2 {
@@ -168,12 +168,12 @@ section {
 }
 
 .contact-info iframe {
-  width: 400px;
-height: 400px;
+  width: 300px;
+height: 300px;
 }
 
 .contact-info div {
-  width: 410px;
+  width: 310px;
   display: inline-block;
   vertical-align: top;
   text-align: left;
