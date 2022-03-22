@@ -5,6 +5,7 @@
 }
 
 body {
+  display: block;
   color: #f3df27;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -12,18 +13,21 @@ body {
 /* HEADER / NAV BAR STYLES START */
 
 header {
-  padding: 20px 35px;
+  padding: 20px 105px;
   background-color: #03090a;
 }
 
 header h1 {
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  display: inline;
+ /* display: inline; */
+ display: flex;
+ justify-content: space-between;
   margin: 0;
-  font-size: 36px;
+  font-size: 26px;
   color: #050942;
 }
+
 
 header a {
   text-decoration: none;
@@ -32,11 +36,11 @@ header a {
 
 header nav {
   float: right;
-  margin: 7px 0;
+  margin: 5px 5px;
 }
 
 header nav ul li {
-  display: inline;
+  display: flex;
 }
 
 header nav ul li a {
@@ -45,13 +49,20 @@ header nav ul li a {
   font-size: 22px;
 }
 
+.text-uppercase {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: #f3df27;
+}
+
 /* HEADER / NavBar Styles End */
+
 
 /* Footer Styles Begin */
 footer {
   background: #fce138;
   width: 100%;
-  padding: 40px 35px;
+  padding: 20px 25px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -109,27 +120,6 @@ section {
   margin: 5px 0 15px 0;
 }
 
- /* .form-input {
-  border: 1px solid #040a0e;
-  display: block;
-  padding: 7px 15px;
-  font-size: 16px;
-  color: #000203;
-  width: 100%;
-  margin-bottom: 15px; 
-}
-
-.hero-form label {
-  margin: 0 5px;
-}
-
-.hero-form button {
-  color: #fce138;
-  background-color: #040607;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-} 
 /* HERO STYLES END */
 
 
@@ -152,7 +142,7 @@ section {
 }
 /* SECTION TITLE STYLES END */
 
-/* WHAT WE DO STYLES */
+/* ABOUT STYLES */
 .intro {
   text-align: center;
 }
@@ -164,80 +154,8 @@ section {
   margin: 0 auto;
   font-size: 20px;
 }
-/* WHAT YOU DO STYLES END */
+/* ABOUT STYLES END */
 
-
-/* WHAT YOU DO STYLES START */
-.steps { 
-  text-align: center;
-  background: #fce138;
-}
-
-.steps div {
-  margin-bottom: 80px;
-}
-
-.steps img {
-  width: 15%;
-  margin: 10px 0;
-} 
-
-.steps h3 {
-  color: #024e76;
-  font-size: 46px;
-  margin-top: 10px;
-}
-
-.steps span {
-  font-size: 38px;
-}
-
-.steps p {
-  color: #39a6b2;
-  font-size: 23px;
-}
-/* WHAT YOU DO STYLES END */
-
-/* MEET THE TRAINERS START */
-.trainers {
-  text-align: center;
-}
-
-.trainer {
-  width: 900px;
-  margin: 0 auto 30px auto;
-  background: #024e76;
-  color: #fce138;
-  overflow: auto;
-}
-
-.trainer img {
-  width: 35%;
-  float: left;
-}
-
-.trainer-bio {
-  padding: 35px;
-  float: left;
-  width: 65%;
-}
-
-.trainer-bio h3 {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-.trainer-bio h4 {
-  font-weight: lighter;
-  font-size: 26px;
-  margin-bottom: 25px;
-}
-
-.trainer-bio p {
-  font-size: 17px;
-  line-height: 1.3;
-}
-/* TRAINER STYLES END */
 
 /* REACH OUT STYLES START */
 .contact {
@@ -278,7 +196,6 @@ height: 400px;
 .contact-info a {
   color: #fce138;
 }
-
 
 /* REACH OUT STYLES END */
 

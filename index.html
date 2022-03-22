@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="assets/Foundation-Sites-CSS/css/app.css"> 
     <link rel="stylesheet" href="assets/Foundation-Sites-CSS/css/foundation.css"> 
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
   <body>
 
@@ -19,23 +20,90 @@
     </nav>
 </header>
 
-<!-- hero/jumbotron -->
-<section class="hero">
-  <div class="hero-cta">
-    <h2>Weather</h2>
+<br>
+
+<main>  
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+        <h2 class="text-uppercase">Search For A City</h2>
+        <form id="user-form" class="input-wrapper">
+          <label class="form-label" for="city" >Search</label>
+           <input name="city" for="city" type="text" placeholder="DETROIT" class="form-input">
+           <button type="submit" class="btn fa fa-search"></button>
+          </form>
+    </div>
+  <div class="current-city col-7">
+    <h2 class="city">Find Your City Weather</h2>
+    <div clas="data">01/01/2022</div>
+    <div class="temp">65°</div>
+    <div class="wind-speed">10mph</div>
+    <div class="uv">UV Index</div>
+    <img src="" alt="" class="icon"/>
+    <div class="humidity">12%</div>
+    </div>
+  </div>  
+
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-5">
+      <h2>Past Cities</h2>
+      <button type="button" class="btn-prev"> past cities</button>
+      <button type="button" class="btn-prev"> past cities</button>
+      <button type="button" class="btn-prev"> past cities</button>
+      <button type="button" class="btn-prev"> past cities</button>
+      <button type="button" class="btn-prev"> past cities</button>
+    </div>
+
     <br>
-    <p>Enter Your City</p>
+    <br>
     <br>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim impedit cum, inventore poss.</p>
+    <div class="five-day col-7">
+      <h2>5 Day Forecast</h2>
+    </div>
+  </div>
+ </div>  
+
+ <hr>
+
+ <!-- GRID -->
+<div class="row">
+  <div class="small-3 columns">
+    <div class="example-content"></div>
+    <h1>Main Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero doloribus debitis placeat!</p>
+  </div>
+
+  <br>
+
+<div class="small-6 columns">
+<div class="example-content"></div>
+<h3>Sidebar</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero doloribus debitis placeat!</p>
+</div>
+</div>
+
+<!-- hero -->
+<section class="hero">
+  <div class="hero-weat">
+    <h2>U.S. National Parks</h2>
+    <br>
+    <p>Add Information Here</p>
+    <br>
+
+    <p>Big Bend National Park</p>
 
   <div>
     <img src="./assets/style/images/mick-haupt-canoe.jpg" alt="People In A Canoe Traveling Along The River Through A Mountain"width="400" height="400">
    
     <hr>
 
-    <h3>DID IT WORK?</h3>
-  
+    <h3>Add Information Here</h3>
+     <p>Glacier National Park</p>
   </div>
 
     <div>
@@ -43,19 +111,18 @@
      
       <hr>
   
-      <h3>DID IT WORK?</h3>
-    
-      </div>
+      <footer>Enter City</footer>
 
-      <section id="what-we-do" class="intro"> 
+    <div>
+    <!--  <aside id="ABOUT" class="intro"> 
         <h2 class=" section-title primary-border"> What We Do</h2>  
         <p>
          butcher selfies chambray shaby chic gentrify readymade yr Echo Park XOXO Tumblr normcore Banksy direct trade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft"
-         rade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft"
          </p>
-         </section>
-         
-    <input type="search" id="searchBar" />
+      </aside>  -->
+    </div>
+
+    <!-- <input type="search" id="searchBar" />
     <select name="state" id="state">
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
