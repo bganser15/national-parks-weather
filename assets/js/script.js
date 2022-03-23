@@ -28,7 +28,6 @@ var displayParks = function () {
 };
 displayParks();
 
-
 $(document).ready(() => {
   // Initial data fetch
   fetchWeather();
@@ -50,7 +49,8 @@ const getUrl = (lat, lon) => {
 const fetchWeather = async (lat, lon) => {
   return await fetch(getUrl())
       .then((res) => res.json())
-      .then((res) => $('.data-json').append(JSON.stringify(res, null, 2)))
-      .catch((err) => console.error('WEATHER ERR: ', err));
+      //.then((res) => $('.data-json').append(JSON.stringify(res, null, 2)))
+      //.catch((err) => console.error('WEATHER ERR: ', err));
+      .then((res) => $('.temp').append(res.current.temp))
+      .catch((err) => state['error'] = err);
 };
-
