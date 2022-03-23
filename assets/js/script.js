@@ -23,19 +23,34 @@ var displayParks = function (parks) {
   //clears past search results
   $(".placeholderContainer").empty();
   for (var i = 0; i < parks.length; i++) {
-    var listPark = document.createElement("div");
+    var listPark = document.createElement("button");
     //gives each item an id equal to the loop iterator
     listPark.setAttribute("id", i);
     listPark.setAttribute("class", "nameOfPark");
     //add class here for styling
+    
+    listPark.classList.add("park-list")
+
     listPark.textContent = parkData[i].fullName;
     $(".placeholderContainer").append(listPark);
+    
+    $(".park-list").on("click", function () {
+      console.log("you clicked me");
+    });
   }
 };
 
+<<<<<<< HEAD
 var getParkInfo = function (event) {
   console.log("park clicked");
 };
+=======
+
+// var showPark = function(){
+//   console.log("it worked")
+// }
+
+>>>>>>> 25f362562cff6df98fa84ddd8112a9453196c712
 
 var getState = function () {
   $(".searchBtn").on("click", function () {
