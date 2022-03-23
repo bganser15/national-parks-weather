@@ -1,0 +1,23 @@
+{
+  "name": "national-parks-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build assets/src/styles.css -o assets/public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bganser15/national-parks-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bganser15/national-parks-weather/issues"
+  },
+  "homepage": "https://github.com/bganser15/national-parks-weather#readme",
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
