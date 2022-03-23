@@ -1,61 +1,53 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>National Parks Weather</title>
-    <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <link rel="stylesheet" href="assets/Foundation-Sites-CSS/css/app.css"> 
-    <link rel="stylesheet" href="assets/Foundation-Sites-CSS/css/foundation.css"> 
   </head>
+
+  <!-- Section for National Parks Weather, fully across the screen-->
   <body>
+    <!-- Jumbotron to display the City name upon search -->
+    <div id="header" class="jumbotron jumbotron-fluid text-container">
+        <h1 id="header-text" class="display-2"></h1>
+        <div id="artist-credit"></div>
+    </div>
 
-    <!-- Navigation -->
-<header>
-    <h1> <a href="/">Travel & Park It!</a> </h1>
-    <nav> <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#contact-us">Contact Us</a>
-    </nav>
-</header>
+    <!-- Main container for webpage content -->
+    <div id="content" class="container">
+        <div class="row">
 
-<!-- hero/jumbotron -->
-<section class="hero">
-  <div class="hero-cta">
-    <h2>Weather</h2>
-    <br>
-    <p>Enter Your City</p>
-    <br>
+            <!-- Left side content with city search box and appended cities -->
+            <div id="content-left" class="col-md-3">
+                <form>
+                    <label for="search-city">Search for a City:</label>
+                    <div class="form-row">
+                        <input id="search-city" class="form-control" name="city" value="Austin"></input>
+                        <!-- fontawesome magnifying glass -->
+                        <button id="search-button" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div id="search-error"></div>
+                <!-- list of prior searched cities -->
+                <ul id="city-results" class="list-group mt-4"></ul>
+                <!-- clear storage button -->
+                <a id="clear-storage" href="#"></a>    
+            </div>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim impedit cum, inventore poss.</p>
-
-  <div>
-    <img src="./assets/style/images/mick-haupt-canoe.jpg" alt="People In A Canoe Traveling Along The River Through A Mountain"width="400" height="400">
-   
-    <hr>
-
-    <h3>DID IT WORK?</h3>
-  
-  </div>
-
-    <div>
-      <img src="./assets/style/images/david-banning-mountainflowers.jpg" alt="Mountain In The Distance With Flowers In the Foreground" width="400" height="400">
-     
-      <hr>
-  
-      <h3>DID IT WORK?</h3>
+            <!-- Right side content showing current weather and five day forecast displays on search -->
+            <div id="content-right" class="col-md-9 pt-4">
+                <!-- Current weather displayed on top -->
+                <div id="current-weather" class="border rounded"></div>
+                <!-- Five day forecast below the current weather -->
+                <div id="five-day-forecast" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
     
-      </div>
-
-      <section id="what-we-do" class="intro"> 
-        <h2 class=" section-title primary-border"> What We Do</h2>  
-        <p>
-         butcher selfies chambray shaby chic gentrify readymade yr Echo Park XOXO Tumblr normcore Banksy direct trade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft"
-         rade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft"
-         </p>
-         </section>
-         
     <input type="search" id="searchBar" />
     <select name="state" id="state">
       <option value="AL">Alabama</option>
@@ -111,12 +103,9 @@
     </select>
     <button class="searchBtn">Search</button> -->
 
-    <!--JQUERY -->
-    <script src="./assets/js/script.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <!-- Javascript and such-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
 </html>
