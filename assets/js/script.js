@@ -14,6 +14,7 @@ var getPark = function () {
     .then(function (data) {
       parkData = data.data;
       displayParks(parkData);
+      return parkData;
     });
 };
 
@@ -23,9 +24,17 @@ var displayParks = function (parks) {
   $(".placeholderContainer").empty();
   for (var i = 0; i < parks.length; i++) {
     var listPark = document.createElement("div");
+    //gives each item an id equal to the loop iterator
+    listPark.setAttribute("id", i);
+    listPark.setAttribute("class", "nameOfPark");
+    //add class here for styling
     listPark.textContent = parkData[i].fullName;
     $(".placeholderContainer").append(listPark);
   }
+};
+
+var getParkInfo = function (event) {
+  console.log("park clicked");
 };
 
 var getState = function () {
@@ -36,6 +45,11 @@ var getState = function () {
   });
 };
 getState();
+
+$(".nameOfPark").on("click", function (event) {
+  var parkClicked = event.target;
+  console.log(parkClicked.text());
+});
 
 //when state name is entered, a list of parks in the state is displayed in div
 //when park is clicked, it gets park n ame and returns data from the clicked event (using event.target) most likely
