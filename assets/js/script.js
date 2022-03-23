@@ -1,5 +1,6 @@
 //nps api key P7v76VxhVDmo5rOLwAyEnDqiIYeclDPZgcT0CdBK
 var searchState;
+var parkData;
 
 var getPark = function () {
   var nationalParksUrl =
@@ -11,15 +12,30 @@ var getPark = function () {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      parkData = data.data;
+      displayParks(parkData);
     });
 };
 
-var displayParks = function () {
+//displays parks in each state
+var displayParks = function (parks) {
+  //clears past search results
+  $(".placeholderContainer").empty();
+  for (var i = 0; i < parks.length; i++) {
+    var listPark = document.createElement("div");
+    listPark.textContent = parkData[i].fullName;
+    $(".placeholderContainer").append(listPark);
+  }
+};
+
+var getState = function () {
   $(".searchBtn").on("click", function () {
     searchState = $("#state").val();
     console.log(searchState);
     getPark();
   });
 };
-displayParks();
+getState();
+
+//when state name is entered, a list of parks in the state is displayed in div
+//when park is clicked, it gets park n ame and returns data from the clicked event (using event.target) most likely
