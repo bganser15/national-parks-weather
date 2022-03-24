@@ -63,7 +63,6 @@ const setWeatherDetails = (parkWeather) => {
   $(".wind-speed").text(parkWeather.windSpeed + " mph");
   $(".humidity").text(parkWeather.humidity + "%");
   $(".icon").attr("src", iconUrl);
-  $(".icon").attr("class", "weather-icon");
 };
 
 //creates button for each park list item

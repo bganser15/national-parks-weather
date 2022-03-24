@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>National Parks Weather</title>
+    <title>Travel & Park It!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/style/style.css">
   </head>
 
-<body class="bg-orange-100 mx-8">
+<body class="bg-gradient-to-r from-orange-50 to-orange-200  mx-8">
   <!-- Navigation -->
   <header>
     <div class="row flex place-content-center">
-      <h1 class="text-6xl"> <a href="/">Travel & Park It!</a></h1>
+      <h1 class="text-6xl text-center"> <a href="/">Travel & Park It!</a></h1>
     </div>
   </header>
-  <div class="row flex place-content-center">
+  <div class="row flex place-content-center text-center">
     <h2>Search for your favorite state's national parks, as well as their current weather!</h2>
   </div>
 
@@ -73,30 +73,30 @@
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
     </select>
-    <button class="searchBtn">Search</button>
+    <button class="searchBtn rounded-full">Search</button>
 
 
 
 
   </div>
 
-  <div class="row flex justify-evenly p-5">
+  <div class="row flex justify-evenly p-5 drop-shadow-2xl">
 
-    <section class="nationalParkListContainer bg-stone-50 col-12 mw-full p-5 drop-shadow-2xl">
+    <section class="nationalParkListContainer bg-stone-50 col-sm-12 mw-full p-5 text-center">
       Search for a state to see a list of National Parks!
 
     </section>
   
-    <section class="weatherInfoContainer bg-stone-50 col-12 mw-full p-5 drop-shadow-2xl">
+    <section class="weatherInfoContainer bg-stone-50 col-sm-12 mw-full p-5 display-flex justify-center">
       <div class="current-park col-9">
         <h2 class="park-name text-center font-bold"></h2>
         <div class="weather-description"></div>
-        <img class="park-photo place-items-center"></img>
-        <h2 class="font-bold">Current Weather<h2>
-        <div>Temp: <span class="temp"></span></div>
-        <div >Windspeed: <span class="wind-speed"></span></div>
-        <div>Humidity: <span class="humidity"></span></div>
-        <img src="" alt="" class="icon" />
+        <img class="park-photo mx-auto"></img>
+        <h2 class="font-bold text-center">Current Weather<h2>
+        <div class="text-center">Temp: <span class="temp"></span></div>
+        <div class="text-center">Windspeed: <span class="wind-speed"></span></div>
+        <div class="text-center">Humidity: <span class="humidity"></span></div>
+        <img src="" alt="" class="icon mx-auto" />
       </div>
       </div>
     </section>
