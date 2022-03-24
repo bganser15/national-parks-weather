@@ -8,23 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-<body class="bg-amber-200">
+<body class="bg-orange-100 mx-8">
   <!-- Navigation -->
   <header>
-    <div class="row flex place-content-center border-2">
+    <div class="row flex place-content-center">
       <h1 class="text-6xl"> <a href="/">Travel & Park It!</a></h1>
     </div>
   </header>
-
-  <br>
-  <br>
-  
-  <div class="row flex place-content-center border-2">
+  <div class="row flex place-content-center">
     <h2>Search for your favorite state's national parks, as well as their current weather!</h2>
   </div>
 
-  <div class="row flex place-content-center border-2">
-    <input type="search" id="searchBar" />
+  <div class="row flex place-content-center">
     <select name="state" id="state">
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
@@ -82,22 +77,14 @@
 
   <br>
   <br>
-<div class="container" >
-  <div class="row flex justify-evenly border-2">
 
-    <div class="col-5">
-      <form id="user-form" class="input-wrapper">
-        <label class="form-label" for="city" >Search</label>
-        <input name="city" for="city" type="text" placeholder="DETROIT" class="form-input" />
-        <button type="submit" class="btn fa fa-search"></button>
-      </form>
-    </div>
+  <div class="row flex justify-evenly h-fit">
 
-    <div class="national-park-container">
+    <div class="national-park-container bg-stone-50 p-10">
       <h2>National Parks In <span></span></h2>
     </div>
   
-    <div class="national-park-weather-info col-7">
+    <div class="national-park-weather-info bg-stone-50 col-7 p-10">
       <h2 class="city">National Park Weather & Info</h2>
       <div class="date">01/01/2022</div>
       <div class="temp">65°</div>
@@ -108,7 +95,6 @@
     </div> 
   
   </div>  
-</div> 
       <!--JQUERY -->
       <script src="./assets/js/script.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
