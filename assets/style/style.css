@@ -63,7 +63,7 @@ footer {
   background: none;
   width: 100%;
   padding: 10px 15px;
-  display: block;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -96,9 +96,9 @@ section {
   background-size: cover; 
   background-position: center;
   position: relative;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap; */
+  flex-wrap: wrap; 
 }
 
 .hero-cta {
