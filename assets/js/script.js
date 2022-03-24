@@ -1,6 +1,7 @@
 //nps api key P7v76VxhVDmo5rOLwAyEnDqiIYeclDPZgcT0CdBK
 var searchState;
 var parkData;
+let selectedParkData;
 
 var getPark = function () {
   var nationalParksUrl =
@@ -12,10 +13,15 @@ var getPark = function () {
       return response.json();
     })
     .then(function (data) {
+      console.log(data, "this is the api");
       parkData = data.data;
       displayParks(parkData);
       return parkData;
     });
+};
+
+let displayInfo = function (data) {
+  console.log(data, "should only have some data");
 };
 
 //displays parks in each state
@@ -26,31 +32,21 @@ var displayParks = function (parks) {
     var listPark = document.createElement("button");
     //gives each item an id equal to the loop iterator
     listPark.setAttribute("id", i);
-    listPark.setAttribute("class", "nameOfPark");
-    //add class here for styling
-    
-    listPark.classList.add("park-list")
+    //add class for styling
+    listPark.setAttribute("class", "park-list");
+    listPark.setAttribute("lat", parkData[i].latitude);
+    listPark.setAttribute("long", parkData[i].longitude);
 
     listPark.textContent = parkData[i].fullName;
     $(".placeholderContainer").append(listPark);
-    
-    $(".park-list").on("click", function () {
-      console.log("you clicked me");
-    });
   }
+
+  $(".park-list").on("click", function (event) {
+    let parkClicked = event.target;
+    parkClicked = $(this).attr("id");
+    displayInfo(parkData[parkClicked]);
+  });
 };
-
-<<<<<<< HEAD
-var getParkInfo = function (event) {
-  console.log("park clicked");
-};
-=======
-
-// var showPark = function(){
-//   console.log("it worked")
-// }
-
->>>>>>> 25f362562cff6df98fa84ddd8112a9453196c712
 
 var getState = function () {
   $(".searchBtn").on("click", function () {
@@ -60,11 +56,3 @@ var getState = function () {
   });
 };
 getState();
-
-$(".nameOfPark").on("click", function (event) {
-  var parkClicked = event.target;
-  console.log(parkClicked.text());
-});
-
-//when state name is entered, a list of parks in the state is displayed in div
-//when park is clicked, it gets park n ame and returns data from the clicked event (using event.target) most likely
