@@ -16,7 +16,7 @@ var getPark = function (searchTerm) {
 };
 
 var displayParks = function () {
-  $(".searchBtn").on("click", function () {
+  $(".btn").on("click", function () {
     searchState = $("#state").val();
     console.log(searchState);
     getPark();
