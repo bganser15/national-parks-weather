@@ -63,6 +63,7 @@ const setWeatherDetails = (parkWeather) => {
   $(".wind-speed").text(parkWeather.windSpeed + " mph");
   $(".humidity").text(parkWeather.humidity + "%");
   $(".icon").attr("src", iconUrl);
+  $(".icon").attr("class", "weather-icon");
 };
 
 //creates button for each park list item
@@ -71,13 +72,13 @@ const createParkListItem = (park) => {
   parkElement.setAttribute("class", "park-list");
   parkElement.textContent = park.fullName;
   parkElement.onclick = () => handleParkItemClick(park);
-  $(".placeholderContainer").append(parkElement);
+  $(".nationalParkListContainer").append(parkElement);
 };
 
 //displays parks in each state
 const displayParks = (parks) => {
   //clears past search results
-  $(".placeholderContainer").empty();
+  $(".nationalParkListContainer").empty();
   parks.forEach(createParkListItem);
 };
 //event listener on search button
