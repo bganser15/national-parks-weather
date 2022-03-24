@@ -3,8 +3,6 @@ const WEATHER_API = "https://api.openweathermap.org";
 const defaultCoords = { lat: 33.625274, lon: -112.21869 };
 const NPS_API = "https://developer.nps.gov/api/v1/parks";
 const NPS_API_KEY = "P7v76VxhVDmo5rOLwAyEnDqiIYeclDPZgcT0CdBK";
-var parkData;
-let selectedParkData;
 
 // easy way to reuse and build the url
 /**
@@ -19,6 +17,9 @@ const getWeatherUrl = (lat, lon) => {
   return `${WEATHER_API}/data/2.5/onecall?units=imperial&lat=${urlLat}&lon=${urlLon}&appid=${WEATHER_API_KEY}`;
 };
 
+const getParkUrl = (state) =>
+  `${NPS_API}?stateCode=${state}&limit=20&start=0&api_key=${NPS_API_KEY}`;
+
 const handleRequest = async (url) => {
   const request = await fetch(url).catch((err) => console.log(err));
   return await request.json();
@@ -27,21 +28,41 @@ const handleRequest = async (url) => {
 const fetchWeather = async (lat, lon) =>
   await handleRequest(getWeatherUrl(lat, lon));
 
-const getParkUrl = (state) =>
-  `${NPS_API}?stateCode=${state}&limit=20&start=0&api_key=${NPS_API_KEY}`;
-
 const fetchParks = async (state) => {
   let parksResponse = await handleRequest(getParkUrl(state));
   return parksResponse.data;
 };
 
-let displayInfo = function (data) {
-  let displayWeatherInfo = function () {};
-  console.log(data, "should only have some data");
-  //add name of park
-  //add address
-  //weather description
-  //add photo
+const handleParkItemClick = async (park) => {
+  const parkWeather = await fetchWeather(park.latitude, park.longitude);
+  const {
+    temp,
+    wind_speed: windSpeed,
+    humidity,
+    weather,
+  } = parkWeather.current;
+  setWeatherDetails({
+    temp,
+    windSpeed,
+    humidity,
+    icon: weather[0].icon,
+  });
+  setParkDetails(park);
+};
+
+const setParkDetails = (park) => {
+  const parkImage = park.images.find((image) => image?.credit.includes("NPS"));
+  $(".park-name").text(park.fullName);
+  $(".weather-description").text(park.weatherInfo);
+  $(".park-photo").attr("src", parkImage?.url || "");
+};
+
+const setWeatherDetails = (parkWeather) => {
+  const iconUrl = `https://openweathermap.org/img/wn/${parkWeather.icon}@2x.png`;
+  $(".temp").text(parkWeather.temp + "°");
+  $(".wind-speed").text(parkWeather.windSpeed + " mph");
+  $(".humidity").text(parkWeather.humidity + "%");
+  $(".icon").attr("src", iconUrl);
 };
 
 //creates button for each park list item
@@ -49,7 +70,7 @@ const createParkListItem = (park) => {
   const parkElement = document.createElement("button");
   parkElement.setAttribute("class", "park-list");
   parkElement.textContent = park.fullName;
-  parkElement.onclick = () => displayInfo(park);
+  parkElement.onclick = () => handleParkItemClick(park);
   $(".placeholderContainer").append(parkElement);
 };
 
