@@ -22,3 +22,14 @@ This site was built using [Github Pages](https://bganser15.github.io/national-pa
 [National Park Service API](https://www.nps.gov/subjects/developer/api-documentation.htm)
 
 [Open Weather API](https://openweathermap.org/current)
+
+## Authors
+
+- [@BrittanyGanser](https://github.com/bganser15)
+- [@EvanKuck](https://github.com/evankuck)
+- [@JaimeRivas](https://www.github.com/Deadpool3413)
+- [@AishaKimpson](https://github.com/akimpson)
+
+## Screenshots
+
+![Travel and Park It Landing Page](/assets/images/npsLandingPage.png)
