@@ -48,6 +48,7 @@ const handleParkItemClick = async (park) => {
     icon: weather[0].icon,
   });
   setParkDetails(park);
+  $(".faveBtn").on("click", createFavoritePark(park));
 };
 
 const setParkDetails = (park) => {
@@ -87,3 +88,12 @@ $(".searchBtn").on("click", async function () {
   displayParks(parks);
   console.log(parks);
 });
+
+const createFavoritePark = function (park) {
+  console.log("fave button clicked");
+  const faveParkItem = document.createElement("button");
+  console.log(park);
+  faveParkItem.textContent = park.fullName;
+  faveParkItem.setAttribute("class", "faveItem");
+  $(".favorite-park-container").append(faveParkItem);
+};

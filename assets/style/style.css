@@ -45,3 +45,21 @@
 .park-photo {
   width: 45%;
 }
+
+.faveBtn {
+  float: right;
+}
+
+.faveBtn i:hover {
+  color: pink;
+}
+
+.favorite-park-container {
+  height: 200px;
+}
+.faveItem {
+  background-color: #6c7866;
+  padding: 3px;
+  border-radius: 5px;
+  margin: 10px 5px 10px 5px;
+}

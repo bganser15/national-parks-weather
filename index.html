@@ -7,6 +7,7 @@
     <title>Travel & Park It!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
 <body class="bg-gradient-to-r from-orange-50 to-orange-200  mx-8">
@@ -88,6 +89,7 @@
     </section>
   
     <section class="weatherInfoContainer bg-stone-50 col-sm-12 mw-full p-5 display-flex justify-center">
+      <button class="faveBtn"><i class="fa fa-heart"></i></button>
       <div class="current-park col-9">
         <h2 class="park-name text-center font-bold"></h2>
         <div class="weather-description"></div>
@@ -98,6 +100,11 @@
         <div class="text-center">Humidity: <span class="humidity"></span></div>
         <img src="" alt="" class="icon mx-auto" />
       </div>
+      </div>
+    </section>
+    <section>
+      <div class="favorite-park-container">
+        <h1 class="text-center font-bold">My Favorite Parks</h1>
       </div>
     </section>
   
