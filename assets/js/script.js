@@ -130,7 +130,7 @@ $('.faveBtn').on('click', () => {
   const isAlreadyInBookmarks = savedBookmarks.some((bookmark) => bookmark.fullName === parkName);
   // if the current park matches a park name in the bookmarks then remove that one
 
-  if (parkName) return;
+  if (parkName === '') return;
   if (isAlreadyInBookmarks) {
     savedBookmarks = savedBookmarks.filter((bookmark) => bookmark.fullName !== parkName);
     localStorage.setItem('bookmarks', JSON.stringify({ bookmarks: savedBookmarks }));
