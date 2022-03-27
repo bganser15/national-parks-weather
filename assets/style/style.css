@@ -1,46 +1,47 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: block;
-  color: #f3df27;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-/* HEADER STYLES START */
-
-header {
-  padding: 30px 125px;
-  background-color: #2153db;
-}
-
-header h1 {
-  font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  font-size: 46px;
-  color: #c4b31c;
-}
-
-/* header a {
-  text-decoration: none;
-  color: #cab921;
-} */
-
-.text-uppercase {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 45px;
-  color: #f3df27;
-}
-
-/* HEADER STYLES END */
-
 .searchBtn {
-font-family: Georgia, 'Times New Roman', Times, serif;
-color: #c4b31c;
+  background-color: #6c7866;
+  padding: 10px 20px 10px 20px;
+  margin-left: 20px;
+}
+
+.searchBtn:hover {
+  background-color: #8b9686;
+}
+
+.nationalParkListContainer {
+  width: 50%;
+}
+
+.weatherInfoContainer {
+  width: 50%;
+}
+
+.park-list {
+  border-radius: 10px;
+  background-color: #ad7645;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 10px;
+  padding: 2px;
+  width: 100%;
+}
+
+.park-list:hover {
+  background-color: #cf9059;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.weather-icon {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 10px;
+  border: solid 2px rgb(118, 118, 118);
+}
+
+.park-photo {
+  width: 45%;
 }
