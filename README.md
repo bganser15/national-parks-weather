@@ -15,7 +15,7 @@ Have you ever wanted to look up a National Park in your state and wondered how i
 
 ## 🔗 Links
 
-This site was built using [Github Pages](https://bganser15.github.io/national-parks-weather/)
+This site was built using [Github Pages](https://akimpson.github.io/national-parks-weather/)
 
 ## API Documentation
 
